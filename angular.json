@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "schess-frontend:build:production"
+              "buildTarget": "schess-frontend:build:production"
             },
             "development": {
-              "browserTarget": "schess-frontend:build:development"
+              "buildTarget": "schess-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "schess-frontend:build"
+            "buildTarget": "schess-frontend:build"
           }
         },
         "test": {
