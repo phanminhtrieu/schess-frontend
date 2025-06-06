@@ -22,6 +22,14 @@
       "es2020",
       "dom"
     ],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ]
+    },
     "useDefineForClassFields": false
   },
   "angularCompilerOptions": {

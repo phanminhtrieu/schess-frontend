@@ -2,8 +2,18 @@
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+const basePath = '';
+export const apiBasePath = 'https://localhost:7283/';
+
 export const environment = {
-  production: false
+  production: false,
+  // iconsPath: `${basePath}assets/icons`,
+  // imgPath: `${basePath}assets/images`,
+  basePath: '',
+  appVersion: 'v1',
+  // USERDATA_KEY: 'authf649fc9a5f55',
+  // isMockEnabled: true,
+  apiUrl: `${apiBasePath}api/frontend`,
 };
 
 /*

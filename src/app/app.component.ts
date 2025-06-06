@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TestService } from './core/services/test.service';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +11,14 @@ import { RouterModule } from '@angular/router';
 })
 export class AppComponent {
   isCollapsed = false;
+  
+  constructor(
+    private testService: TestService
+  ) {
+
+  }
+
+  ngOnInit(): void {
+    this.testService.getAllProducts().subscribe((res) => console.log('🔑🔑🔑'));
+  }
 }
