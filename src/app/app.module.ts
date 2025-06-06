@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser'
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
+
+// import { AppRoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { IconsProviderModule } from './icons-provider.module';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -22,11 +24,11 @@ registerLocaleData(en);
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     IconsProviderModule,
     NzLayoutModule,
     NzMenuModule,
-    FormsModule
+    FormsModule,
+    RouterModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US },
