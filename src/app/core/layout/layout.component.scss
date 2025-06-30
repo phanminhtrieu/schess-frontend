@@ -27,3 +27,18 @@ nz-footer {
   padding: 24px;
   min-height: 280px;
 }
+
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .menu-left {
+    flex: 1;
+  }
+
+  .menu-right__select {
+    padding-right: 20px;
+    width: fit-content;
+  }
+}

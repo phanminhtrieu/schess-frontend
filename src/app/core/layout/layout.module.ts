@@ -18,7 +18,7 @@ const routes: Routes = [
     CommonModule,
     RouterModule,
     RouterModule.forChild(routes),
-    LayoutComponent // standalone
+    LayoutComponent, // standalone
   ]
 })
 export class LayoutModule { }

@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { DEFAULT_API_STATE, DEFAULT_LOADER, Endpoints, IApiOptions, Methods, RequestOptions } from '@app/enums/api';
+import { DEFAULT_API_STATE, DEFAULT_LOADER, Endpoints, IApiOptions, Loader, Methods, RequestOptions } from '@app/enums/api';
 import { environment } from '@env/environment';
-import { catchError, finalize, Observable, tap, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, finalize, Observable, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -90,5 +90,22 @@ export class ApiService {
 
   private isLegalUrl() {
     return true;
+  }
+
+  public generateLoader(): Loader {
+    const isLoadingSubject = new BehaviorSubject<boolean>(false);
+
+		return {
+			isLoadingSubject: isLoadingSubject,
+      isLoading$: isLoadingSubject.asObservable()
+		};
+	}
+
+  public setUrlParameter(parameter: string | number, name: string): void {
+    this.params.set(name, parameter);
+  }
+
+  public clearUrlParameters(): void {
+    this.params.clear();
   }
 }
