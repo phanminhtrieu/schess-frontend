@@ -1,0 +1,17 @@
+html, body, app-layout {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;  // mặc định
+  }
+  
+  app-layout {
+    display: flex;           // nếu muốn dùng flexbox để bố trí con
+    flex-direction: column;  // xếp dọc
+    height: 100vh;           // chiếm toàn bộ chiều cao viewport
+    width: 100vw;            // chiếm toàn bộ chiều rộng viewport
+    overflow: hidden;        // tránh scroll nếu không cần
+  }
+  
