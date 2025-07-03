@@ -10,6 +10,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 
 import { NavigationService } from '../services/navigation.service';
 import { FormsModule } from '@angular/forms';
+import { SchessButtonComponent } from '@app/shared/components/schess-button/schess-button.component';
 
 
 @Component({
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     NzLayoutModule, 
     NzAvatarModule, 
     NzSelectModule, 
-    FormsModule
+    FormsModule,
+    SchessButtonComponent
   ],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
